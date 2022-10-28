@@ -1,11 +1,28 @@
 import { Text, View,TouchableOpacity,TextInput, Image } from 'react-native'
 import React from 'react'
-import styles from './signupStyles'
+import styles from './signupStyles';
+import { ref, set } from "firebase/database";
+import { db } from '../../firebaseConfig';
 
 const SignupScreen = ({navigation}) => {
     const [number, onChangeNumber] = React.useState("");
     const [name, onChangeName] = React.useState("");
     const [email, onChangeEmail] = React.useState("");
+
+    const submitInfo = () =>{
+      // const newKey = push(child(ref(Database),'users')).key
+      set(ref(db, 'users/' + name), {
+        username: name,
+        email: email,
+        number: number,
+      }).then(()=>{
+        alert("data added to the database");
+      }).catch((error)=>{
+          alert(error);
+      })
+
+    navigation.navigate('otp')
+    }
   return (
     <View  style={styles.signupContainer} >
       <Image
@@ -14,14 +31,14 @@ const SignupScreen = ({navigation}) => {
         <Text style={styles.headingText}>Few Steps Away from your journy....</Text>
         <TextInput
           style={styles.loginInput}
-          onChangeText={onChangeName}
+          onChangeText={(name) => {onChangeName(name)}}
           value={name}
           placeholder="Enter full Name"
           keyboardType="numeric"
         />
         <TextInput
           style={styles.loginInput}
-          onChangeText={onChangeEmail}
+          onChangeText={(email)=>{onChangeEmail(email)}}
           value={email}
           placeholder="Enter Email"
           
@@ -33,7 +50,7 @@ const SignupScreen = ({navigation}) => {
           placeholder="Enter Your Number"
           keyboardType="numeric"
         />
-        <TouchableOpacity onPress={() => navigation.navigate('otp')} >
+        <TouchableOpacity onPress={submitInfo} >
         <View style={styles.button}>
             <Text style={styles.buttonText}>Send OTP</Text>
           </View>

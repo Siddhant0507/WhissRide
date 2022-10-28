@@ -3,28 +3,21 @@ import {
   Text,
   View,
   Dimensions,
-  TouchableOpacity
+  TouchableOpacity,
+  Image
 } from "react-native";
 import styles from "./styles"
-import Svg, { Image } from "react-native-svg";
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 
 
 const LoginSignup = ({navigation}) => {
-  const { height, width } = Dimensions.get("window");
-      
   return (
-    <View style={styles.container}>
-      
-      <View style={StyleSheet.absoluteFill}>
-        {/* <Svg style={styles.svgStyle}>
-          <Image
-            style={styles.imagestyle}
-            href={require("./login-background.jpg")}
-            preserveAspectRatio="xMidYMid slice"
-          />
-        </Svg> */}
+    <View> <Image 
+    style={styles.loginImage}
+    source={require('../../assets/LoginImage.png')}
+    />
+        <View>
+        
         </View>
         <View style={styles.bottomContainer}>
           <TouchableOpacity onPress={() => navigation.navigate('Login')}>
@@ -36,7 +29,9 @@ const LoginSignup = ({navigation}) => {
             <Text style={styles.buttonText}>SIGN UP</Text>
           </View>
           </TouchableOpacity>
-        </View>    
+        </View> 
+
+
     </View>
     );
 }

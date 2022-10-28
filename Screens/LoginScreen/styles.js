@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     height: 55,
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: 35,
+    borderRadius: 15,
     marginHorizontal: 20,
     marginVertical: 10,
     borderWidth: 1,
@@ -21,7 +21,6 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontSize: 20,
-    fontWeight: '600',
     color: 'white',
     letterSpacing: 0.5
   },
@@ -40,13 +39,12 @@ const styles = StyleSheet.create({
     height: 55,
    alignItems: 'center',
     justifyContent: 'center', 
-    borderRadius: 35,
+    borderRadius: 15,
     marginHorizontal: 20,
     marginVertical: 10,
     borderWidth: 1,
     fontSize: 20,
     textAlign:'center',
-    fontWeight:'500'
  },
  
   

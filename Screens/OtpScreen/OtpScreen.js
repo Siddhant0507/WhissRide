@@ -1,6 +1,7 @@
 import { TextInput,View,TouchableOpacity ,Text,Image,StyleSheet} from "react-native";
 import React from 'react';
-import styles from "./styles"
+import styles from "./styles";
+import {Ionicons} from '@expo/vector-icons/Ionicons';
 
 const Otp = ({navigation}) => {
   const [number, onChangeNumber] = React.useState('');
@@ -8,6 +9,7 @@ const Otp = ({navigation}) => {
  
     return (
       <View >
+        
         <Image
         style={styles.otpImage}
         source = {require("./bike.jpg")}
