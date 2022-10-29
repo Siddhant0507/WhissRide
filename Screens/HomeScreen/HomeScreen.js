@@ -9,7 +9,7 @@ const HomeScreen = ({navigation}) => {
   return (
  
 <View>
-
+        <View style={styles.mapScreen}> </View>
 
       <View style={styles.googleAutocomplete}>
       <GooglePlacesAutocomplete

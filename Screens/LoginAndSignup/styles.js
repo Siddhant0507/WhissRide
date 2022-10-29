@@ -10,8 +10,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     marginHorizontal: 20,
     marginVertical: 10,
-    borderWidth: 1,
-    borderColor: 'white'
+    
   },
   buttonText: {
     fontSize: 20,
@@ -19,26 +18,25 @@ const styles = StyleSheet.create({
     color: 'white',
     letterSpacing: 0.5
   },
-  bottomContainer: {
-    height:height/4,
-    justifyContent: 'center',
-    marginTop:15
-   
-  },
-  textInput: {
-    height: 50,
-    borderWidth: 1,
-    borderColor: 'rgba(0, 0, 0, 0.2)',
-    marginHorizontal: 20,
-    marginVertical: 10,
-    borderRadius: 25,
-    paddingLeft: 10
-  },
-  loginImage:{
-    height:height,
-    width:width,
-    position:"absolute"
   
+  loginImage:{
+    height:"65vh",
+    width:width,
+  },
+  headingText:{
+    fontSize:27,
+    fontWeight:'500',
+    paddingLeft:20,
+    paddingBottom:10,
+  },
+  tandc:{
+    paddingTop:20,
+    paddingHorizontal:20,
+  
+  },
+  bottomContainer:{
+    
+
   }
 });
 

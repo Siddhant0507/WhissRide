@@ -3,7 +3,8 @@ const {width, height} = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+  
+  
   },
   loginContainer:{
     marginTop:30,
@@ -28,6 +29,7 @@ const styles = StyleSheet.create({
     fontSize:32,
     fontWeight:"600",
     marginHorizontal:15,
+    marginTop:40,
   },
   subHeadingText:{
     marginVertical:10,
@@ -46,6 +48,13 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign:'center',
  },
+ backButton:{
+  height:'2.5rem',
+  borderRadius:100,
+  backgroundColor:'black',
+  width:'2.5rem'
+
+ }
  
   
 

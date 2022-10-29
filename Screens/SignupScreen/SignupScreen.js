@@ -3,11 +3,17 @@ import React from 'react'
 import styles from './signupStyles';
 import { ref, set } from "firebase/database";
 import { db } from '../../firebaseConfig';
+import react from 'react';
 
 const SignupScreen = ({navigation}) => {
     const [number, onChangeNumber] = React.useState("");
     const [name, onChangeName] = React.useState("");
     const [email, onChangeEmail] = React.useState("");
+    const [buttondisable , buttonenable]= React.useState(true);
+
+    const enableButton = ()=>{
+         buttonenable(false)
+    }
 
     const submitInfo = () =>{
       // const newKey = push(child(ref(Database),'users')).key

@@ -40,7 +40,8 @@ const Login = ({navigation}) => {
   }
 
   return (
-    <View>
+    <View style={styles.container
+    }>
        <View>
        <Text style={styles.headingText}>
            Enter Phone Number for varification
@@ -74,7 +75,10 @@ const Login = ({navigation}) => {
        <TouchableOpacity onPress={confirmCode}>
         <View style={styles.button} ><Text style={styles.buttonText}>Confirm varification</Text> </View>
       </TouchableOpacity>
-
+{/* 
+      <TouchableOpacity onPress={()=>navigation.goBack()}>
+        <View style={styles.backButton} ><Text style={styles.buttonText}>.</Text> </View>
+      </TouchableOpacity> */}
 
 
 
@@ -87,20 +91,3 @@ export default Login;
 
 
 
-
-
-// <View style={styles.loginContainer}>
-//      
-//       <TextInput
-//         style={styles.loginInput}
-//         onChangeText={onChangeNumber}
-//         value={number}
-//         placeholder="Enter Your Number"
-//         keyboardType="numeric"
-//       />
-//       <TouchableOpacity onPress={() => navigation.navigate('otp')}>
-//         <View style={styles.button}>
-//           <Text style={styles.buttonText}>Send OTP</Text>
-//         </View>
-//       </TouchableOpacity>
-//     </View>

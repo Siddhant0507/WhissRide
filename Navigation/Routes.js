@@ -8,6 +8,7 @@ import OtpScreen from '../Screens/OtpScreen/OtpScreen';
 import SignupScreen from '../Screens/SignupScreen/SignupScreen';
 import HomeScreen from '../Screens/HomeScreen/HomeScreen';
 import RideListScreen from '../Screens/RideListScreen/RideListScreen';
+import DateAndTime from '../Screens/DateAndTime/DateAndTime';
 
 
 const Stack = createNativeStackNavigator();
@@ -18,7 +19,8 @@ function Routes() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-      {/* <Stack.Screen name="ridelist" component={RideListScreen} /> */}
+        
+      {/* <Stack.Screen name="dateandtime" component={DateAndTime} /> */}
         <Stack.Screen name="loginSignup" component={LoginSignup} />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="otp" component={OtpScreen} />

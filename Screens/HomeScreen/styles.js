@@ -6,10 +6,9 @@ const styles = StyleSheet.create({
     container: {
     },
     mapScreen:{
-      height:height/2,
+      height:height*3/4,
       width:width,
       backgroundColor:"gray",
-      marginBottom:10
     },
     buttons:{
       backgroundColor: 'rgba(123,104,238,0.8)',
