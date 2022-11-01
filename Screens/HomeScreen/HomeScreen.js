@@ -30,8 +30,8 @@ const HomeScreen = ({navigation}) => {
       }}
     /></View>
       <View> 
-        <TouchableOpacity style={styles.buttons}>
-         <Text style={styles.buttonText}>Book a Ride</Text>
+        <TouchableOpacity style={styles.buttons} onPress={navigation.navigate('dateandtime')}>
+         <Text style={styles.buttonText} >Book a Ride</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.buttons}>
          <Text style={styles.buttonText}>Explore Packages</Text>

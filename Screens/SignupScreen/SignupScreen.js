@@ -3,7 +3,7 @@ import React from 'react'
 import styles from './signupStyles';
 import { ref, set } from "firebase/database";
 import { db } from '../../firebaseConfig';
-import react from 'react';
+
 
 const SignupScreen = ({navigation}) => {
     const [number, onChangeNumber] = React.useState("");

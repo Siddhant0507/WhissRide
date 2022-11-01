@@ -57,7 +57,7 @@ const Login = ({navigation}) => {
       firebaseConfig ={firebaseConfig}
       />
       <TextInput
-      placeholder="enter your number with contry code"
+      placeholder="Enter Phone Number"
       onChangeText={setPhoneNumber}
       keyboardType="phone-pad"
       autoCompleteType ="tel"

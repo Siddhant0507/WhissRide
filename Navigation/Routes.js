@@ -19,13 +19,14 @@ function Routes() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        
-      {/* <Stack.Screen name="dateandtime" component={DateAndTime} /> */}
+      
         <Stack.Screen name="loginSignup" component={LoginSignup} />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="otp" component={OtpScreen} />
         <Stack.Screen name="Signup" component={SignupScreen} />
         <Stack.Screen name="home" component={HomeScreen} />
+        <Stack.Screen name="dateandtime" component={DateAndTime} />
+      
       </Stack.Navigator>
     </NavigationContainer>
   );

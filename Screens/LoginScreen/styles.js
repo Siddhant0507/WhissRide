@@ -3,6 +3,8 @@ const {width, height} = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   container: {
+    marginTop:'10vh',
+    marginHorizontal:10
   
   
   },
@@ -29,7 +31,7 @@ const styles = StyleSheet.create({
     fontSize:32,
     fontWeight:"600",
     marginHorizontal:15,
-    marginTop:40,
+    
   },
   subHeadingText:{
     marginVertical:10,
