@@ -66,6 +66,7 @@ const Login = ({navigation}) => {
       <TouchableOpacity onPress={sendVarification} >
         <View style={styles.button}> <Text style={styles.buttonText}>Send varification</Text></View>
       </TouchableOpacity>
+      
       <TextInput
       placeholder="enter otp"
       onChangeText={setCode}
