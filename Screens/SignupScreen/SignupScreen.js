@@ -5,6 +5,7 @@ import { ref, set } from "firebase/database";
 import { db } from '../../firebaseConfig';
 
 
+
 const SignupScreen = ({navigation}) => {
     const [number, onChangeNumber] = React.useState("");
     const [name, onChangeName] = React.useState("");
@@ -15,8 +16,9 @@ const SignupScreen = ({navigation}) => {
          buttonenable(false)
     }
 
+   
+
     const submitInfo = () =>{
-      // const newKey = push(child(ref(Database),'users')).key
       set(ref(db, 'users/' + name), {
         username: name,
         email: email,
@@ -27,7 +29,7 @@ const SignupScreen = ({navigation}) => {
           alert(error);
       })
 
-    navigation.navigate('otp')
+    navigation.navigate('home')
     }
   return (
     <View  style={styles.signupContainer} >
@@ -35,24 +37,32 @@ const SignupScreen = ({navigation}) => {
           style={styles.signupImage}
           source = {require("./bike.jpg")}/>
         <Text style={styles.headingText}>Few Steps Away from your journy....</Text>
+
         <TextInput
           style={styles.loginInput}
           onChangeText={(name) => {onChangeName(name)}}
           value={name}
           placeholder="Enter full Name"
-          keyboardType="numeric"
+          placeholderTextColor='#444'
+          autoCapitalize='none'
+          textContentType='userName'
+          autoFocus={true}
+          keyboardType="email-type"
         />
         <TextInput
           style={styles.loginInput}
           onChangeText={(email)=>{onChangeEmail(email)}}
           value={email}
+          placeholderTextColor='#444'
           placeholder="Enter Email"
+         
           
         />
         <TextInput
           style={styles.loginInput}
           onChangeText={onChangeNumber}
           value={number}
+          placeholderTextColor='#444'
           placeholder="Enter Your Number"
           keyboardType="numeric"
         />
@@ -60,7 +70,7 @@ const SignupScreen = ({navigation}) => {
         <View style={styles.button}>
             <Text style={styles.buttonText}>Send OTP</Text>
           </View>
-        </TouchableOpacity>
+        </TouchableOpacity>  
     </View>
   )
 }

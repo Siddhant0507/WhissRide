@@ -36,7 +36,7 @@ const Login = ({navigation}) => {
       alert(error);
      })
      Alert.alert("Login successful .Welcome to dashboard",);
-     navigation.navigate('otp')
+     navigation.navigate('home')
   }
 
   return (
